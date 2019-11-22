@@ -28,9 +28,32 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# CSS vendor prefixes
+gem 'autoprefixer-rails'
+# Sass mixins
+gem 'bourbon'
+# Faster json parser
+gem 'oj'
+# Middleware to abort requests that are taking too long, default to 15s
+gem 'rack-timeout'
+# Better rails form
+gem 'simple_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
+  # Better ruby console
+  gem 'pry-meta'
+  gem 'pry-rails'
+  # Time management
+  gem 'timecop'
+  # Rails linting
+  gem 'rubocop'
+  # Manage testing data
+  gem 'factory_bot_rails'
+  # Generate fake data
+  gem 'faker'
 end
 
 group :development do
@@ -40,13 +63,23 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Indentify N+1 querys
+  gem 'bullet'
+  # Overwrite rails default error page
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
+  # Rspec for tests
+  gem 'rspec-rails'
+
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'database_cleaner'
   gem 'webdrivers'
 end
 
