@@ -15,15 +15,15 @@ In order to use and develop this application you're gonna need:
 
 ## Installation
 
-Making sure that you have all the requirements fullfiled you can proceed with the installation.
+Make sure that you have all the requirements fullfiled so you can proceed with the installation.
 
-First, install ruby's version 2.6.5 by using [RVM](https://rvm.io/rvm/install) or [rbenv](https://github.com/rbenv/rbenv). Example of installing with **RVM**:
+First, you need to install ruby's version 2.6.5 by using [RVM](https://rvm.io/rvm/install) or [rbenv](https://github.com/rbenv/rbenv). Example of installing with **RVM**:
 
 ```shell
 rvm install 2.6.5
 ```
 
-After that make sure that your current ruby version is 2.6.5:
+After that, make sure that your current ruby version is 2.6.5:
 
 ```
 ruby --version
@@ -31,13 +31,13 @@ ruby --version
 
 If the previous command return the correct ruby version can move to the next step.
 
-Check if PostgreSQL is running properly, using macOSX and brew:
+Check if PostgreSQL is running properly. Using macOSX with brew services:
 
 ```
 brew services list
 ```
 
-If postgresql is not with **started** status you can simply run:
+If postgresql is not with the **started** status you can simply run:
 
 ```
 brew services start postgresql
@@ -51,7 +51,7 @@ Clone this repository to your workspace and install the project dependencies:
 bundle install
 ```
 
-If you don't have bundler, you can install by running `gem install bundler`.
+If you don't have bundler, you can install it by running `gem install bundler`.
 
 Install javascript dependencies with **yarn**:
 
@@ -76,7 +76,7 @@ After that you should be able to access the application on `http://localhost:300
 
 ### OBS
 
-Make sure that you set your local environment variables. You can copy `.env.sample` to `.env` and then
+Don't forget to set your local environment variables. You can copy `.env.sample` to `.env` and then
 add all the necessary variables to it.
 
 
