@@ -1,25 +1,84 @@
-# README
+# Connie.social
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Core codebase for https://connie.social web application.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+In order to use and develop this application you're gonna need:
 
-* System dependencies
+* Ruby 2.6.5
+* Rails 6.0.1
+* Yarn
+* NodeJS
+* PostgreSQL 11.5 (recommended version)
+* Redis server
 
-* Configuration
+## Installation
 
-* Database creation
+Making sure that you have all the requirements fullfiled you can proceed with the installation.
 
-* Database initialization
+First, install ruby's version 2.6.5 by using [RVM](https://rvm.io/rvm/install) or [rbenv](https://github.com/rbenv/rbenv). Example of installing with **RVM**:
 
-* How to run the test suite
+```shell
+rvm install 2.6.5
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+After that make sure that your current ruby version is 2.6.5:
 
-* Deployment instructions
+```
+ruby --version
+```
+
+If the previous command return the correct ruby version can move to the next step.
+
+Check if PostgreSQL is running properly, using macOSX and brew:
+
+```
+brew services list
+```
+
+If postgresql is not with **started** status you can simply run:
+
+```
+brew services start postgresql
+```
+
+And you should be ready to run the rails application.
+
+Clone this repository to your workspace and install the project dependencies:
+
+```
+bundle install
+```
+
+If you don't have bundler, you can install by running `gem install bundler`.
+
+Install javascript dependencies with **yarn**:
+
+```
+yarn install
+```
+
+Create development and testing databases and then run the migrations:
+
+```
+rails db:create db:migrate
+```
+
+To finish you just need to boot the puma server and this is easily done by running:
+
+```
+rails s
+```
+
+After that you should be able to access the application on `http://localhost:3000/`.
+
+
+### OBS
+
+Make sure that you set your local environment variables. You can copy `.env.sample` to `.env` and then
+add all the necessary variables to it.
+
 
 ## Gemfile
 
