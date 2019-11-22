@@ -38,6 +38,8 @@ gem 'oj'
 gem 'rack-timeout'
 # Better rails form
 gem 'simple_form'
+# Async job processing
+gem 'sidekiq'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

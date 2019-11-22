@@ -1,0 +1,49 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - "Gemfile"
+    - "db/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
+    - "bin/**/*"
+    - "log/**/*"
+    - "node_modules/**/*"
+
+LineLength:
+  Max: 120
+
+BlockLength:
+  Max: 80
+  Exclude:
+    - "spec/**/*"
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+
+Rails/SkipsModelValidations:
+  Whitelist:
+    - touch
+
+Metrics/ParameterLists:
+  Max: 5
+
+Metrics/MethodLength:
+  Max: 20
+
+Layout/IndentationConsistency:
+  EnforcedStyle: normal
+
+Rails/InverseOf:
+  Enabled: false

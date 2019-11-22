@@ -90,6 +90,7 @@ It includes application gems like:
 * [Oj](http://www.ohler.com/oj/) for fast json parsing
 * [Rack Timeout](https://github.com/heroku/rack-timeout) to abort requests that are taking too long
 * [Simple Form](https://github.com/plataformatec/simple_form) for form markup and style
+* [Sidekiq](https://github.com/mperham/sidekiq) for async job processing
 
 And development gems like:
 
